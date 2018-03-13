@@ -6,7 +6,7 @@
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
         <!--Import agent-pedia.css-->
-        <link rel="stylesheet" type="text/css" href="">        
+        <link rel="stylesheet" type="text/css" href="css/studyGuide.css">     
         
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,17 +15,23 @@
         <div class="row">
         <header>
             <div class="navbar-fixed">        
-              <nav  class="nav-extended">
+              <nav  class="nav-extended orange lighten-3">
                 <!-- top navbar menu -->  
                 <div class="nav-wrapper">
-                    <!-- restart the app -->
-                    <a href="#" class="left"><i class="material-icons">autorenew</i></a>
-                    <!-- app's title -->
-                    <a href="#!" class="brand-logo center">Study Guide</a>
-                    <!-- route student to menu page -->
-                    <a href="#" class="right"><i class="material-icons">home</i></a>
+                    <div class="col s4 center">
+                        <!-- restart the app -->
+                        <a href="#" class=" red-text text-accent-4"><i class="material-icons">autorenew</i></a>
+                    </div>
+                    <div class="col s4 center">
+                        <!-- app's title -->
+                        <a href="#!" class="brand-logo center black-text">Study Guide</a>
+                    </div>
+                    <div class="col s4 center">
+                        <!-- route student to menu page -->
+                        <a href="#"><i class="material-icons teal-text">home</i></a>
+                    </div>
                 </div>
-                <div class="nav-content">
+                <div class="nav-content black-text">
                 <!-- encouragment animation area -->  
                 <p class="center">Encouragement </p>                  
                 </div>
@@ -35,7 +41,7 @@
         </header>
         </div>
         <div class="row">    
-        <main>      
+        <main class="container">      
             <!-- main content area -->
             <div class="col s12">
                 <div ui-view></div>
@@ -56,8 +62,9 @@
 <script src="js/app.js"></script>
         
 <!--Import files for-->
-<script src=""></script>
-<script src=""></script>
+<script src="questions/questions.html"></script>
+<script src="questions/questionsController.js"></script>
+<script src="questions/questionsService.js"></script>
         
 <script>
     /*code for */

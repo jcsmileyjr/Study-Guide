@@ -1,0 +1,16 @@
+/*          Entire App      */
+/*provide some whitepace between nav and main content, keeps the content from being hidden under the navigation*/
+main {
+    padding-top: 25px;
+}
+
+
+/*          Question's Page UI*/
+
+#submit {
+    margin-top: 30px;
+}
+
+form {
+    margin-bottom: 20px;
+}

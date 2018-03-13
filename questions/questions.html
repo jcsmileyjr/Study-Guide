@@ -9,7 +9,7 @@
                 <textarea class="z-depth-1" ng-model="userAnswer" placeholder="answers go here" required></textarea>
                 </div>
                 <div class="col s6"><a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a></div>
-                <div class="col s6"><input class="black-text red lighten-4 btn" type="reset"></div>
+                <div class="col s6"><input class="black-text red lighten-4 btn" type="reset" ng-disabled="guide.completed==true"></div>
             </form>
         </div>
         <div class="divider"></div>

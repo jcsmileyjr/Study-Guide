@@ -9,14 +9,19 @@
                 <textarea class="z-depth-1" ng-model="userAnswer" placeholder="answers go here" required></textarea>
                 </div>
                 <div class="col s6">
-                    <!-- <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a> -->
-                    <i class="medium material-icons orange-text text-accent-3" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">check</i>
+                     <a class="check btn white black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">
+                         <i class="large material-icons orange-text text-accent-3">check</i>                    
+                    </a>
+                    <!--
+                    <button><i class="medium material-icons orange-text text-accent-3" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">check</i></button>
+                    -->
                 </div>
-                <!--
+                
                 <div class="col s6 right-align">
                     <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">
+                    
                 </div>
-                -->
+                
             </form>
         </div>
         <div class="divider"></div>

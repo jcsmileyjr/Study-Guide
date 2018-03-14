@@ -9,7 +9,12 @@ myApp.controller('questionsController',  function($scope, TestData){
     
     $scope.completed = function(index, answer){
         TestData.saveAnswer($scope.currentTest, index, answer);
+        console.table($scope.studyQuestions);
     }
     
+    
+    $scope.reset = function(answer){
+        answer = "";
+    }
 
 });//end of Controller

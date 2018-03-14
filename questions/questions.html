@@ -8,13 +8,20 @@
                 <div>
                 <textarea class="z-depth-1" ng-model="userAnswer" placeholder="answers go here" required></textarea>
                 </div>
-                <div class="col s6"><a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a></div>
-                <div class="col s6"><input class="black-text red lighten-4 btn" type="reset" ng-disabled="guide.completed==true"></div>
+                <div class="col s6">
+                    <!-- <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a> -->
+                    <i class="medium material-icons orange-text text-accent-3" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">check</i>
+                </div>
+                <!--
+                <div class="col s6 right-align">
+                    <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">
+                </div>
+                -->
             </form>
         </div>
         <div class="divider"></div>
         <div class=" col s12 center">
-            <a class="btn-floating btn-large orange darken-4" id="submit"><i class="material-icons orange-text text-lighten-3">check</i></a>
+            <i class="large material-icons white orange-text text-darken-4" id="submit">insert_drive_file</i>
         </div>
         
         

@@ -2,26 +2,27 @@
     <div class="col s12">
         <!-- study guide questions and student answer's input boxes -->
         <div ng-repeat="guide in studyQuestions">
-            <!-- study guide questions-->
             <form class="flow-text section" name="myform" novalidate>
-                <p>{{$index + 1}}. {{guide.question}}</p>
-                <div>
+                <div input-field>
+                    <!-- Question-->    
+                    <strong id="question">{{$index + 1}}. {{guide.question}}</strong>
+                    <!-- Answer-->    
+                    <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer"></textarea>                      
                 </div>
                 <div class="col s6">
+                    <!-- Student click this button to submit answer and disable field-->
                     <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a> 
                 </div>
-                
+                <!-- Student click this button to submit reset answer-->
                 <div class="col s6 right-align">
-                    <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">
-                    
+                    <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">                    
                 </div>
                 
             </form>
         </div>
-        <div class="divider"></div>
         <div class=" col s12 center ">
             <a class="btn btn-large orange darken-4 black-text" id="submit">
-                <i class="material-icons orange-text text-lighten-3">check</i>
+                <i class="material-icons md-36 orange-text text-lighten-3">check</i>
                 Check Your Answers
             </a>
         </div>

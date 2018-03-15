@@ -6,15 +6,9 @@
             <form class="flow-text section" name="myform" novalidate>
                 <p>{{$index + 1}}. {{guide.question}}</p>
                 <div>
-                <textarea class="z-depth-1" ng-model="userAnswer" placeholder="answers go here" required></textarea>
                 </div>
                 <div class="col s6">
-                     <a class="check btn white black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">
-                         <i class="large material-icons orange-text text-accent-3">check</i>                    
-                    </a>
-                    <!--
-                    <button><i class="medium material-icons orange-text text-accent-3" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">check</i></button>
-                    -->
+                    <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a> 
                 </div>
                 
                 <div class="col s6 right-align">
@@ -25,8 +19,11 @@
             </form>
         </div>
         <div class="divider"></div>
-        <div class=" col s12 center">
-            <i class="large material-icons white orange-text text-darken-4" id="submit">insert_drive_file</i>
+        <div class=" col s12 center ">
+            <a class="btn btn-large orange darken-4 black-text" id="submit">
+                <i class="material-icons orange-text text-lighten-3">check</i>
+                Check Your Answers
+            </a>
         </div>
         
         

@@ -6,15 +6,12 @@ main {
 
 
 /*          Question's Page UI*/
-
+/*add whitespace between "Check your Answers" button and other elements*/
 #submit {
     margin-top: 30px;
 }
 
+/*add whitespace between each queston and answer grouping*/
 form {
-    margin-bottom: 20px;
-}
-
-a.check {
-    
+    margin-bottom: 30px;
 }

@@ -11,7 +11,10 @@
                 </div>
                 <div class="col s6">
                     <!-- Student click this button to submit answer and disable field-->
-                    <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">Completed</a> 
+                    <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">
+                    <i class="material-icons md-24 orange-text text-lighten-3">checkmark</i>    
+                    Done                    
+                    </a> 
                 </div>
                 <!-- Student click this button to submit reset answer-->
                 <div class="col s6 right-align">
@@ -21,8 +24,9 @@
             </form>
         </div>
         <div class=" col s12 center ">
+            <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
             <a class="btn btn-large orange darken-4 black-text" id="submit">
-                <i class="material-icons md-36 orange-text text-lighten-3">check</i>
+                <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
                 Check Your Answers
             </a>
         </div>

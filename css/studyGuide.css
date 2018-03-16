@@ -1,11 +1,11 @@
-/*          Entire App      */
+/*                  Entire App      */
 /*provide some whitepace between nav and main content, keeps the content from being hidden under the navigation*/
 main {
     padding-top: 25px;
 }
 
 
-/*          Question's Page UI*/
+/*                  Question's Page UI      */
 /*add whitespace between "Check your Answers" button and other elements*/
 #submit {
     margin-top: 30px;
@@ -22,9 +22,11 @@ div>textarea {
 }
 
 
-/*         Reccommended style guide for Materialize CSS icons*/
+
+
+/*         Reccommended style guide for Materialize CSS icons   */
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size:36px;  }
+.material-icons.md-36 { font-size: 36px;  }
 .material-icons.md-48 { font-size: 48px; }

@@ -13,7 +13,7 @@ main {
 
 /*add whitespace between each queston and answer grouping*/
 form {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 /*add whitespace between textarea and the action buttons*/
@@ -24,6 +24,16 @@ div>textarea {
 /*round the buttons*/
 a.btn, input[type="reset"] {
     border-radius: 25px;
+}
+
+/*ensure the "Correct" and "Incorrect" radio options inside of labels are seperated*/
+label {
+    display: block;
+}
+
+/*decrease height between the given answer and the correct answer*/
+#checkingAnswers {
+    margin-top: -15px;
 }
 
 

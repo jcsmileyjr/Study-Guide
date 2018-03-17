@@ -21,6 +21,11 @@ div>textarea {
     margin-bottom: 10px;
 }
 
+/*round the buttons*/
+a.btn, input[type="reset"] {
+    border-radius: 25px;
+}
+
 
 
 

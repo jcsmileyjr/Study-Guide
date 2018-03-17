@@ -11,7 +11,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body ng-app="StudyGuide">
+    <body ng-app="StudyGuide"  ng-controller="navFunctionsController">
         <div class="row">
         <header>
             <div class="navbar-fixed">        
@@ -27,9 +27,9 @@
                         <a href="#"><i class="large material-icons black-text">menu</i></a>
                     </div>
                 </div>
-                <div class="nav-content black-text">
+                <div class="nav-content black-text" >
                 <!-- encouragment animation area -->  
-                <p class="center">Encouragement </p>                  
+                <p class="center">{{encouragement}} </p>                  
                 </div>
               </nav>
             </div>    
@@ -56,6 +56,9 @@
         
 <!--Import javascript files (controller and services) used or called by ui-view -->
 <script src="js/app.js"></script>
+        
+<script src="nav%20functions/navFunctionsController.js"></script>        
+<script src="nav%20functions/scoreService.js"></script>
         
 <!--Import files for-->
 <script src="questions/questions.html"></script>

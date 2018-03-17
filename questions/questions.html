@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col s12">
+        <!-- study guide questions and student answer's input boxes -->
+        <div ng-repeat="guide in studyQuestions">
+            <form class="flow-text section" name="myform" novalidate>
+                <div input-field>
+                    <!-- Question-->    
+                    <strong id="question">{{$index + 1}}. {{guide.question}}</strong>
+                    <!-- Answer-->    
+                    <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer"></textarea>                      
+                </div>
+                <div class="col s6">
+                    <!-- Student click this button to submit answer and disable field-->
+                    <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">
+                    <!-- <i class="material-icons md-24 orange-text text-lighten-3">checkmark</i> -->   
+                    Done                    
+                    </a> 
+                </div>
+                <!-- Student click this button to submit reset answer-->
+                <div class="col s6 right-align">
+                    <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">                    
+                </div>
+                
+            </form>
+        </div>
+        <div class=" col s12 center ">
+            <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
+            <a class="btn btn-large orange darken-4 black-text" id="submit">
+                <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
+                Check Your Answers
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+<script>
+    /*code */
+   
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+        <!--Import agent-pedia.css-->
+        <link rel="stylesheet" type="text/css" href="css/studyGuide.css">     
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body ng-app="StudyGuide"  ng-controller="navFunctionsController">
+        <div class="row">
+        <header>
+            <div class="navbar-fixed">        
+              <nav  class="nav-extended orange lighten-3">
+                <!-- top navbar menu -->  
+                <div class="nav-wrapper">
+                    <div class="col s8 center">
+                        <!-- app's title -->
+                        <a href="#!" class="brand-logo center black-text">Study Guide</a>
+                    </div>
+                    <div class="col s4 right-align">
+                        <!-- route student to menu page -->
+                        <a href="#"><i class="large material-icons black-text">menu</i></a>
+                    </div>
+                </div>
+                <div class="nav-content black-text" >
+                <!-- encouragment animation area -->  
+                <p class="center">{{encouragement}} </p>                  
+                </div>
+              </nav>
+            </div>    
+ 
+        </header>
+        </div>
+        <div class="row">    
+        <main class="container">      
+            <!-- main content area -->
+            <div class="col s12">
+                <div ui-view></div>
+            </div>            
+        </main>    
+        </div>       
+        
+          
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+
+<!--Import angularjs files-->
+<script src="libs/angular.min.js"></script>
+<script src="libs/angular-ui-router.min.js"></script>
+        
+<!--Import javascript files (controller and services) used or called by ui-view -->
+<script src="js/app.js"></script>
+        
+<script src="nav%20functions/navFunctionsController.js"></script>        
+<script src="nav%20functions/scoreService.js"></script>
+        
+<!--Import files for-->
+<script src="questions/questions.html"></script>
+<script src="questions/questionsController.js"></script>
+<script src="questions/questionsService.js"></script>
+        
+<script>
+    /*code for */
+
+    
+</script>
+    </body>
+</html>

@@ -13,7 +13,7 @@
                 <div ng-show="takingTest">
                     <div class="col s6">
                         <!-- Student click this button to submit answer and disable field-->
-                        <a class="btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
+                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
                         Done                    
                         </a> 
                     </div>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col s4">
                         <!-- Student click this button to submit answer and disable field-->
-                        <a class="btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
                         Done                    
                         </a>                        
                     </div>
@@ -51,15 +51,15 @@
         </div>
         <div class="col s12 center flow-text" ng-show="takingTest">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
-            <a class="btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion">
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion">
                 <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
-                Check Your Answers
+                Check Answers
             </a>            
         </div>
         <div class=" col s12 center flow-text" ng-show="checkingAnswers">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
-            <a class="btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled= "enableFinishButton">
-                Finish
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled= "enableFinishButton">
+                Final Grade
             </a>
         </div>        
         

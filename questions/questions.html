@@ -42,20 +42,26 @@
                     </div>
                     <div class="col s4">
                         <!-- Student click this button to submit answer and disable field-->
-                        <a class="btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer)">
+                        <a class="btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
                         Done                    
                         </a>                        
                     </div>
                 </div>                    
             </form>
         </div>
-        <div class=" col s12 center ">
+        <div class="col s12 center flow-text" ng-show="takingTest">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
             <a class="btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()">
                 <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
                 Check Your Answers
             </a>
         </div>
+        <div class=" col s12 center flow-text" ng-show="checkingAnswers">
+            <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
+            <a class="btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()">
+                <i class="material-icons md-36 orange-text text-lighten-3">grade</i>Finish
+            </a>
+        </div>        
         
         
     </div>

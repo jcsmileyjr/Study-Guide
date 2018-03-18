@@ -23,16 +23,24 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     
     //function to switch student from taking test to grading of the test
     $scope.checkAnswers = function(){
-        $scope.takingTest = false;
-        $scope.checkingAnswers = true;
-        Score.showScoreBoard(true);
+        $scope.takingTest = false;  //removed the completed and reset buttons
+        $scope.checkingAnswers = true; // add the radio options and done button
+        Score.showScoreBoard(true); //show the current grade UI elements in the nav
     }
     
     //function use to count how many student got correct to tally up grade
-    $scope.gradeAnswer = function(checked){
+    $scope.gradeAnswer = function(checked, index){
         if(checked == "correct") {
-            Score.addScore();   //add one correct answer to tally if correct to be use with grading
+            Score.addScore();   //add one correct answer to tally if correct to be use with grading 
+            //Disable the done button by changing the graded property in the linked database object property
+            TestData.disableGradeButton($scope.currentTest, index);
         }
+        if(checked =="incorrect"){
+            //Disable the done button by changing the graded property in the linked database object property
+            TestData.disableGradeButton($scope.currentTest, index);            
+        }
+        
+        
     }
     
     

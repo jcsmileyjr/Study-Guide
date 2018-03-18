@@ -12,28 +12,29 @@ myApp.factory('Score', [ function () {
          //add one to score.count when user gets correct answer
          addScore: function(){
              score.count+= 1;
-             console.log("correct count " + score.count);
          },
          
          //add one to score.count when user gets correct answer
          addQuestionsAnswered: function(){
              answered.questionsAnswered+= 1; 
-             console.log("answered " + answered.questionsAnswered);
          },
          
-         //return the current score
-         getScore: function(){                
-               return (score.count/answered.questionsAnswered)*100;
+         //return the current score if student has answer a question or graded an answer
+         getScore: function(){
+            if(score.count==0 | answered.questionsAnswered==0){
+                return 0;
+            }else {
+                return (score.count/answered.questionsAnswered)*100;
+            }
+            return (score.count/answered.questionsAnswered)*100;
          }, 
          
          //variable use between several controllers to show scoreboard while child is grading
          showScoreBoard: function(switchBoards){
             if(switchBoards == true) {
                 scoreBoard.showScore = true;
-                console.log("scoreboard is true");
             }else {
                 scoreBoard.showScore = false;
-                console.log("scoreboard is false");
             }
              
          },

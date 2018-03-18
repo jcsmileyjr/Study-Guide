@@ -18,6 +18,9 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;
     
+    //get number of questions in the test and return to Score service for the completion rate feature
+    Score.getNumberOfTestQuestions($scope.numberOfTestQuestions);
+    
     //initialize varible use to show the number of test questions answered. This is use in the done and gradeAnswer function to enable submit buttons
     $scope.numberofTestQuestionAnswered = 0;
     

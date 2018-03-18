@@ -1,7 +1,16 @@
 /*                  Entire App      */
 /*provide some whitepace between nav and main content, keeps the content from being hidden under the navigation*/
 main {
-    padding-top: 25px;
+    padding-top: 35px;
+}
+
+
+
+/*fix bug issues with LG small phones*/
+@media only screen and (max-width: 265px) {
+    .toBigOnSmallScreens {
+        font-size: 12px;
+    }
 }
 
 

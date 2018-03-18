@@ -26,7 +26,6 @@ myApp.factory('Score', [ function () {
             }else {
                 return (score.count/answered.questionsAnswered)*100;
             }
-            return (score.count/answered.questionsAnswered)*100;
          }, 
          
          //variable use between several controllers to show scoreboard while child is grading

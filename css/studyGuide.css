@@ -26,6 +26,7 @@ a.btn, input[type="reset"] {
     border-radius: 25px;
 }
 
+
 /*ensure the "Correct" and "Incorrect" radio options inside of labels are seperated*/
 label {
     display: block;

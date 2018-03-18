@@ -19,6 +19,11 @@ myApp.factory('Score', [ function () {
              answered.questionsAnswered+= 1; 
          },
          
+         //return the number of questions answer to ensure student answer all questions, then the "check your answers" button will be disable.
+         getQuestionsAnswered: function(){
+             return answered.questionsAnswered;
+         },
+         
          //return the current score if student has answer a question or graded an answer
          getScore: function(){
             if(score.count==0 | answered.questionsAnswered==0){

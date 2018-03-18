@@ -15,10 +15,26 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;
     
+    //initialize the variable use to disable "check your answers" button based on the number of test questions to ensure student complete form
+    $scope.completeEveryQuestion = true;
+    console.log($scope.completeEveryQuestion);
+    
     //function to get student answer to a question saved to the question object it came from    
     $scope.done = function(index, answer){
+        //Use the service to record the student's answer
         TestData.saveAnswer($scope.currentTest, index, answer);
-        Score.addQuestionsAnswered()    //add one for each question answer to be use with grading
+        
+        //add one for each question answer to be use with grading
+        Score.addQuestionsAnswered()    
+        
+        //get the number of questions answer from the Score's service object
+        $scope.numberofTestQuestionAnswered = Score.getQuestionsAnswered();
+        
+        //if the number of test questions answered matched the number of test questions, the "check your answer" button is re-enable.
+        if($scope.numberOfTestQuestions == $scope.numberofTestQuestionAnswered){
+            $scope.completeEveryQuestion = false
+            
+        }
     }
     
     //function to switch student from taking test to grading of the test

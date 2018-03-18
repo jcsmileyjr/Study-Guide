@@ -59,7 +59,6 @@ myApp.factory('Score', [ function () {
          
          getNumberOfTestQuestions: function(x){
              completionRate.numberOfQuestions = x;
-             console.log(completionRate.numberOfQuestions);
          },
          
          getCompletionRate: function(){

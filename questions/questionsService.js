@@ -2,9 +2,9 @@
 myApp.factory('TestData',  function () {
     
     var scienceChp1 = [        
-        {"question":"What is the color of the sun", "answer":"yellow", "userAnswer":"", "completed":false},
-        {"question":"What is the color of the grass", "answer":"green", "userAnswer":"", "completed":false},
-        {"question":"What is the color of a apple", "answer":"red", "userAnswer":"", "completed":false}
+        {"question":"What is the color of the sun", "answer":"yellow", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is the color of the grass", "answer":"green", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is the color of a apple", "answer":"red", "userAnswer":"", "completed":false, "graded":false}
     ];
     
 return {    
@@ -23,6 +23,13 @@ return {
                 case "scienceChp1":
                     scienceChp1[spot].userAnswer = answer;
                     scienceChp1[spot].completed = true;
+            }
+        },
+        //retreive the current index and name of test to change the linked graded property
+        disableGradeButton:function(currentTest, spot){
+            switch(currentTest){
+                case "scienceChp1":
+                    scienceChp1[spot].graded = true;
             }
         }
     

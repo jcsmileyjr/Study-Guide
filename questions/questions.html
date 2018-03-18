@@ -5,31 +5,63 @@
             <form class="flow-text section" name="myform" novalidate>
                 <div input-field>
                     <!-- Question-->    
-                    <strong id="question">{{$index + 1}}. {{guide.question}}</strong>
+                    <strong>{{$index + 1}}. {{guide.question}}</strong>
                     <!-- Answer-->    
                     <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer"></textarea>                      
                 </div>
-                <div class="col s6">
-                    <!-- Student click this button to submit answer and disable field-->
-                    <a class="btn orange accent-3 black-text" ng-click="completed($index, userAnswer)" ng-disabled="guide.completed==true">
-                    <!-- <i class="material-icons md-24 orange-text text-lighten-3">checkmark</i> -->   
-                    Done                    
-                    </a> 
+                <!-- Show this div when app start for student to type answers-->
+                <div ng-show="takingTest">
+                    <div class="col s6">
+                        <!-- Student click this button to submit answer and disable field-->
+                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
+                        Done                    
+                        </a> 
+                    </div>
+                    <!-- Student click this button to submit reset answer-->
+                    <div class="col s6 right-align">
+                        <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">                    
+                    </div>
                 </div>
-                <!-- Student click this button to submit reset answer-->
-                <div class="col s6 right-align">
-                    <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">                    
-                </div>
-                
+                <!-- Show this div when student has finish typing answers and press the submit button to start grading study guide-->
+                <div id="checkingAnswers" ng-show="checkingAnswers">
+                    <!-- Shows the correct answer to the question-->
+                    <p class="blue-text text-darken-4">
+                        <span class="black-text">Correct Answer:</span>
+                             {{guide.answer}}
+                    </p>
+                    <!-- Allow the user to choose if the given answer is correct or incorrect compare to the correct answer-->
+                    <div class="col s8">
+                        <label>
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="correct">
+                            <span>Correct</span>
+                        </label>
+                        <label>
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="incorrect">
+                            <span>Incorrect</span>
+                        </label>
+                    </div>
+                    <div class="col s4">
+                        <!-- Student click this button to submit answer and disable field-->
+                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                        Done                    
+                        </a>                        
+                    </div>
+                </div>                    
             </form>
         </div>
-        <div class=" col s12 center ">
+        <div class="col s12 center flow-text" ng-show="takingTest">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
-            <a class="btn btn-large orange darken-4 black-text" id="submit">
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion">
                 <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
-                Check Your Answers
-            </a>
+                Check Answers
+            </a>            
         </div>
+        <div class=" col s12 center flow-text" ng-show="checkingAnswers">
+            <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled= "enableFinishButton">
+                Final Grade
+            </a>
+        </div>        
         
         
     </div>

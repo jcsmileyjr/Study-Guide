@@ -12,8 +12,11 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     //record the current test name being taken
     $scope.currentTest = "scienceChp1";
     
+    //get test name from the TestData service to be displayed 
+    $scope.studyTestName = TestData.getTestName("scienceChp1");
+    
     //get test data from the TestData service to be displayed 
-    $scope.studyQuestions = TestData.getData("scienceChp1");
+    $scope.studyQuestions = TestData.getData("scienceChp1");    
     
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;

@@ -1,4 +1,4 @@
-myApp.controller('finalGradeController',  function($scope, Score){
+myApp.controller('finalGradeController',  function($scope, Score, TestData){
     
     //initialize the image that will be shown on the final grade page based on the grade
     $scope.imageBasedOnGrade = "/css/small_cartoon_pandas.jpg"
@@ -6,6 +6,9 @@ myApp.controller('finalGradeController',  function($scope, Score){
     //initialize the number of correct and incorrect answers
     $scope.correctAnswers = 0;
     $scope.incorrectAnswers = 0;
+    
+    //get test name from the TestData service to be displayed 
+    $scope.studyTestName = TestData.getTestName("scienceChp1");    
     
     //update and display the final score on the final grade page
     $scope.finalScore = Score.getScore();

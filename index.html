@@ -30,16 +30,37 @@
                     </div>                    
                     <div class="col s2 right-align flow-text">
                         <!-- route student to menu page -->
-                        <a href="#"><i class="large material-icons black-text">menu</i></a>
+                        <a href="#modal1" id="menu" class="modal-trigger"><i class="large material-icons black-text ">menu</i></a>                      
                     </div>
                 </div>  
-                <div class="nav-content black-text" >
                 <!-- encouragment animation area -->  
-                <p class="center">{{encouragement}} </p>                  
+                <div class="nav-content black-text" >  
+                    <p class="center">{{encouragement}} </p>                 
                 </div>
+                  
+                <!-- Modal Structure-->
+                <div id="modal1" class="modal black-text  center-align">
+                    <div class="modal-header orange lighten-3">
+                        <h4>Menu</h4>
+                    </div>
+                    <div class="modal-content">
+                        <!-- Restart button-->
+                        <a class="btn orange darken-4 black-text" ng-click="restart()">
+                            Restart
+                        </a>
+                        
+                        <!-- Route student to loadTest page to choose a new test to take-->
+                        <a class="btn orange darken-4 black-text"  ui-sref="loadTest">
+                            Choose a Different Test
+                        </a>                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                  </div>                  
               </nav>
             </div>    
- 
         </header>
         </div>
         <div class="row  ">    
@@ -77,8 +98,9 @@
 <script src="final%20grade/finalGradeController.js"></script>
         
 <script>
-    /*code for */
-
+    /*code for feature discovery*/
+    var elem = document.querySelector('.modal');
+    var instance = M.Modal.init(elem);
     
 </script>
     </body>

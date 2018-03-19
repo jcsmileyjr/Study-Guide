@@ -18,6 +18,11 @@ myApp.controller('navFunctionsController',  function($scope, $interval, Score){
         $scope.currentGrade = Score.getScore();       
     }
     
+    //restart the app by reloading the browser page
+    $scope.restart = function(){
+        location.reload();
+    }    
+    
     //call the updateEncouragement function continously
     $interval($scope.updateEncouragement, 3000);
     

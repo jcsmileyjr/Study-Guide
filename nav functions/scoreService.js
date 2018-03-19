@@ -1,7 +1,7 @@
 /*A service that use a counter to keep score and return that score. */
 myApp.factory('Score', [ function () {
     
-    var score = {"count":0};
+    var score = {"count":0,"Correct":0, "Incorrect":0};
     var answered = {"questionsAnswered":0};
     var scoreBoard = {"showScore": false};
     var completionBoard= {"showCompletion":true};
@@ -34,6 +34,26 @@ myApp.factory('Score', [ function () {
                 return (score.count/answered.questionsAnswered)*100;
             }
          }, 
+         
+         //record a correct answer to use on the final grade page
+         addCorrectAnswer: function(){
+             score.Correct += 1;
+         },
+         
+         //record a incorrect answer to use on the final grade page
+         addIncorrectAnswer: function(){
+             score.Incorrect += 1;
+         },
+         
+         //get a correct answer to use on the final grade page
+         getCorrectAnswer: function(){
+             return score.Correct;
+         },
+         
+         //get a incorrect answer to use on the final grade page
+         getIncorrectAnswer: function(){
+             return score.Incorrect;
+         },         
          
          //variable use between several controllers to show scoreboard in the nav while student is grading answers
          showScoreBoard: function(switchBoards){

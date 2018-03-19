@@ -1,7 +1,4 @@
 myApp.controller('finalGradeController',  function($scope, Score, TestData){
-    
-    //initialize the image that will be shown on the final grade page based on the grade
-    $scope.imageBasedOnGrade = "/css/small_cartoon_pandas.jpg"
 
     //initialize the number of correct and incorrect answers
     $scope.correctAnswers = 0;
@@ -21,19 +18,21 @@ myApp.controller('finalGradeController',  function($scope, Score, TestData){
     $scope.incorrectAnswers = Score.getIncorrectAnswer();
     
     //business logic that determines the grade display on the final grade page
+    
     if($scope.finalScore >= 90){
-        $scope.imageBasedOnGrade = "/Study-Guide/css/small_cartoon_pandas.jpg"
+        $scope.imageBasedOnGrade = "/Study-Guide/css/small_cartoon_pandas.jpg";
         $scope.gradeLetter = "A";
     }else if($scope.finalScore >= 80) {
-        $scope.imageBasedOnGrade = "/Study-Guide/css/small_white_panda.jpg"
+        $scope.imageBasedOnGrade = "/Study-Guide/css/small_white_panda.jpg";
         $scope.gradeLetter = "B";
     }else if ($scope.finalScore >= 70){
-        $scope.imageBasedOnGrade = "/Study-Guide/css/white_cute_panda.jpg"
+        $scope.imageBasedOnGrade = "/Study-Guide/css/white_cute_panda.jpg";
         $scope.gradeLetter = "C";
     }else if ($scope.finalScore >= 60){
-        $scope.imageBasedOnGrade = "/Study-Guide/css/cute_panda.jpg"
+        $scope.imageBasedOnGrade = "/Study-Guide/css/cute_panda.jpg";
         $scope.gradeLetter = "D";
     }else {
+         $scope.imageBasedOnGrade = "/Study-Guide/css/cute_panda.jpg";
          $scope.gradeLetter = "F";
     }    
 

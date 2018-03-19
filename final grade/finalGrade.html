@@ -1,9 +1,12 @@
-<div class="row panda">
-    <div class="col s12">
-        <h2 class="center-align">{{gradeLetter}}</h2>
-        <p>Score: {{finalScore | number: 0}}%</p>
+<div class="row black-text ">
+    <div class="col s12 center">
+        <h1 class="center-align">{{gradeLetter}}</h1>
+        <h4>Score: {{finalScore | number: 0}}%</h4>
         <p>Number of Correct Answers: {{correctAnswers}} </p>
         <p>Number of Incorrect Answers: {{incorrectAnswers}}</p>
+    </div>
+    <div>
+        <img class="responsive-img" src={{imageBasedOnGrade}}>
     </div>
 </div>
 <script>

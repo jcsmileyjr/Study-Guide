@@ -32,6 +32,7 @@ myApp.controller('finalGradeController',  function($scope, Score, TestData){
         $scope.imageBasedOnGrade = "/Study-Guide/css/cute_panda.jpg";
         $scope.gradeLetter = "D";
     }else {
+         $scope.imageBasedOnGrade = "/Study-Guide/css/cute_panda.jpg";
          $scope.gradeLetter = "F";
     }    
 

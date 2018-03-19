@@ -61,6 +61,9 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             //add one correct answer to tally if correct to be use with grading 
             Score.addScore();
             
+            //update number of correct answers to be display on final grade page
+            Score.addCorrectAnswer();
+            
             //Disable the done button by changing the graded property in the linked database object property
             TestData.disableGradeButton($scope.currentTest, index);
             
@@ -68,7 +71,10 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
         }
         if(checked =="incorrect"){
             //Disable the done button by changing the graded property in the linked database object property
-            TestData.disableGradeButton($scope.currentTest, index);            
+            TestData.disableGradeButton($scope.currentTest, index);         
+            
+            //update number of incorrect answers to be displayed on the final grade page
+            Score.addIncorrectAnswer();
         }
         
         //keep count of how many answers have been graded

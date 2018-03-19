@@ -13,6 +13,12 @@ myApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $u
             url:'/questions',
             templateUrl: 'questions/questions.html',
             controller: "questionsController"
-        })    
+        })
+        //The navigation state redirects the user to the template connected to the controller  
+        .state('finalGrade', {
+            url:'/finalGrade',
+            templateUrl: 'final grade/finalGrade.html',
+            controller: "finalGradeController"
+        })     
     
 }]);

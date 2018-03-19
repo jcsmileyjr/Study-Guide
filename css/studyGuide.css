@@ -47,7 +47,11 @@ label {
 }
 
 
-
+/*                  Final Grade Page UI      */
+.panda {
+    background-image: url("cute_panda.jpg");
+    background-repeat: no-repeat;
+}
 
 /*         Reccommended style guide for Materialize CSS icons   */
 /* Rules for sizing the icon. */

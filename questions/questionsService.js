@@ -39,18 +39,18 @@ myApp.factory('TestData',  function () {
         {"question":"What are the four groups of metals", "answer":"alkia metals, alkaline metals, transition metals, inner transition metals", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Which group of metal is the softest and most reactive", "answer":"alkali metals:", "userAnswer":"", "completed":false, "graded":false},
         {"question":"What is the two main groups of non-metals", "answer":"Noble gases and Halogens", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Which group of non-metals is the most reactive", "answer":"Halogens", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of non-metals is the most reactive in water", "answer":"Halogens", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Which group of elements contain a full valence shell", "answer":"Nobel Gases", "userAnswer":"", "completed":false, "graded":false},         
         {"question":"Metals increase in hardness as you move ____ to ___ of the periodic table", "answer":"left to right", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Define valence electrons", "answer":"Electron on the outer shells", "userAnswer":"", "completed":false, "graded":false},
         {"question":"The semi metal that is in period two is ", "answer":"Boron", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Which group of elements tend to form salts and are called the saltmakers", "answer":"Hydrogen", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of elements tend to form salts and are called the saltmakers", "answer":"Halogen", "userAnswer":"", "completed":false, "graded":false},
         {"question":"How many valence elctrons does and atom need to become stable", "answer":"8", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Elements in the same ____ share similar properties", "answer":"Group", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"How many elements are in Periond 5 and 6", "answer":"18 & ??", "userAnswer":"", "completed":false, "graded":false}, 
+        {"question":"How many elements are in Periond 5 and 6", "answer":"18 & 32", "userAnswer":"", "completed":false, "graded":false}, 
         {"question":"How many valence elctrons does and atom need to become stable", "answer":"8", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"How many elements are in Period 18.", "answer":"Group", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What charge is a cartoon", "answer":"Positive", "userAnswer":"", "completed":false, "graded":false},          
+        {"question":"What charge is a anion", "answer":"Negative", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What charge is a cation", "answer":"Positive", "userAnswer":"", "completed":false, "graded":false},          
         ],"Science Chapter 1"
     ];
     

@@ -14,7 +14,7 @@
     <body ng-app="StudyGuide"  ng-controller="navFunctionsController">
         <div class="row ">
         <header class="spaceBetweenNavMain">
-            <div class="navbar-fixed">        
+            <div class="">        
               <nav  class="nav-extended orange lighten-3">
                 <!-- This nav menu is shown if the student has finish the test and started grading. Shows the menu button, app's title and the current grade every 10 seconds updated from the navFunctionsController -->  
                 <div class="nav-wrapper">
@@ -32,10 +32,6 @@
                         <!-- route student to menu page -->
                         <a href="#modal1" id="menu" class="modal-trigger"><i class="large material-icons black-text ">menu</i></a>                      
                     </div>
-                </div>  
-                <!-- encouragment animation area -->  
-                <div class="nav-content black-text" >  
-                    <p class="center">{{encouragement}} </p>                 
                 </div>
                   
                 <!-- Modal Structure-->
@@ -62,8 +58,13 @@
               </nav>
             </div>    
         </header>
+            <!-- encouragment animation area -->  
+            <div class="fixedElement orange lighten-3 z-depth-1" >  
+                <p class="center target">{{encouragement}} </p>                 
+            </div>             
         </div>
-        <div class="row  ">    
+        <div class="row">
+           
         <main class="container">      
             <!-- main content area -->
             <div class="col s12">
@@ -101,6 +102,19 @@
     /*code for feature discovery*/
     var elem = document.querySelector('.modal');
     var instance = M.Modal.init(elem);
+
+/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
+$(window).scroll(function(e){ 
+  var $el = $('.fixedElement'); 
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 100 && !isPositionFixed){ 
+    $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
+  }
+  if ($(this).scrollTop() < 100 && isPositionFixed)
+  {
+    $('.fixedElement').css({'position': 'static', 'top': '0px'}); 
+  } 
+});   
     
 </script>
     </body>

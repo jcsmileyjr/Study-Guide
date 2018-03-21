@@ -1,9 +1,13 @@
 /*                  Entire App      */
 /*provide some whitepace between nav and main content, keeps the content from being hidden under the navigation*/
 main {
-    padding-top: 35px;
+    //padding-top: 35px;
 }
 
+.fixedElement {
+    width: 100%; /*stretch the encouragement div across the entire app*/
+    margin-top:  -13px;/*move encouragement div to below the nav*/
+}
 
 
 /*fix bug issues with LG small phones*/

@@ -26,7 +26,7 @@ myApp.factory('TestData',  function () {
         {"question":"Do metals gain or lose electrons when they form ions", "answer":"Lose", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Do non-metals gain or lose electrons when they form ions", "answer":"Gain", "userAnswer":"", "completed":false, "graded":false},
         {"question":"What type of ions do metals form", "answer":"Positive ion", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What type of ions do metals form", "answer":"Negative ion", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What type of ions do non-metals form", "answer":"Negative ion", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Number of valence electrons for the Alkaline Earth Metals", "answer":"+2", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Number of valence electrons for the Alkali  Metals", "answer":"+1", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Number of valence electrons for the Halogens", "answer":"-1", "userAnswer":"", "completed":false, "graded":false},
@@ -35,7 +35,23 @@ myApp.factory('TestData',  function () {
         {"question":"Number of valence electrons for the Group 3A", "answer":"3", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Number of valence electrons for the Group 5A", "answer":"5", "userAnswer":"", "completed":false, "graded":false},         
         {"question":"5 Characteristics of Metals", "answer":"Shinny, Magnectic, malleable, Positive ion, ductile ", "userAnswer":"", "completed":false, "graded":false},  
-        {"question":"5 Characteristics of Non-metals", "answer":"Negative Ion, Poor Conducter, Not Ductile, Not malleable, Not lustrous (shiny))", "userAnswer":"", "completed":false, "graded":false}],"Science Chapter 1"
+        {"question":"5 Characteristics of Non-metals", "answer":"Negative Ion, Poor Conducter, Not Ductile, Not malleable, Not lustrous (shiny))", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What are the four groups of metals", "answer":"alkia metals, alkaline metals, transition metals, inner transition metals", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of metal is the softest and most reactive", "answer":"alkali metals:", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is the two main groups of non-metals", "answer":"Noble gases and Halogens", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of non-metals is the most reactive", "answer":"Halogens", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of elements contain a full valence shell", "answer":"Nobel Gases", "userAnswer":"", "completed":false, "graded":false},         
+        {"question":"Metals increase in hardness as you move ____ to ___ of the periodic table", "answer":"left to right", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Define valence electrons", "answer":"Electron on the outer shells", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"The semi metal that is in period two is ", "answer":"Boron", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Which group of elements tend to form salts and are called the saltmakers", "answer":"Hydrogen", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"How many valence elctrons does and atom need to become stable", "answer":"8", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Elements in the same ____ share similar properties", "answer":"Group", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"How many elements are in Periond 5 and 6", "answer":"18 & ??", "userAnswer":"", "completed":false, "graded":false}, 
+        {"question":"How many valence elctrons does and atom need to become stable", "answer":"8", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"How many elements are in Period 18.", "answer":"Group", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What charge is a cartoon", "answer":"Positive", "userAnswer":"", "completed":false, "graded":false},          
+        ],"Science Chapter 1"
     ];
     
 return {    

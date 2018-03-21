@@ -2,9 +2,40 @@
 myApp.factory('TestData',  function () {
     
     var scienceChp1 = [        
-        [{"question":"What is the color of the sun", "answer":"yellow", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What is the color of the grass", "answer":"green", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What is the color of a apple", "answer":"red", "userAnswer":"", "completed":false, "graded":false}],"Science Chapter 1"
+        [{"question":"What is the periodic law", "answer":"The law that states that the repeating chemical and physical properties of elements change periodically with the atomic number of the element", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Father of the Periodic table is ", "answer":"Mendeleev", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Mendeleev arrange the Periodic table by?", "answer":"Atomic Mass", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Mosley arranged the periodic table according to increasing", "answer":"atomic numbers", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"horizontal rows of periodic table are called", "answer":"periods", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"vertical columns of the periodic able are called", "answer":"roots", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"On the periodic table, Family is another name for a ", "answer":"Group", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"an element that has properties of both metals and nonmetals", "answer":"metalloids", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is the classification of most elements on the periodic table", "answer":"Metals", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Group number and example for Alkali Metals", "answer":"Group 1 & Li, Na, Ls", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Group number and example for Alkaliine Earth Metals", "answer":"Group 2 & Be, Mg, Ca", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Group number and example for Halogens", "answer":"Group 17 & F, C1, Br", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Group number and example for Noble Gases", "answer":"Group 18 & He, Ne, Ar", "userAnswer":"", "completed":false, "graded":false}, 
+        {"question":"Example of a transition metal", "answer":"silver", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Transition elements are located between which two groups", "answer":"3 and 12", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Metals are located to the ____ and ____ of the metalloid line", "answer":"Left and Under", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Non-Metals are located to the _____ and ____ of the metalliod line", "answer":"Right and Above", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"A non-metal that is not located to the right and above the metalliod line", "answer":"Hydrogen", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Energy levels ______ as you move down a group", "answer":"Increase", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is the only metal that is a liquid at room temperature", "answer":"mercury", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What is an Ion", "answer":"an atom , radical, or molecule taht has gain or lost one or more electrons", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Do metals gain or lose electrons when they form ions", "answer":"Lose", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Do non-metals gain or lose electrons when they form ions", "answer":"Gain", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What type of ions do metals form", "answer":"Positive ion", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"What type of ions do metals form", "answer":"Negative ion", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Alkaline Earth Metals", "answer":"+2", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Alkali  Metals", "answer":"+1", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Halogens", "answer":"-1", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Noble Gases", "answer":"8", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Group 6A", "answer":"6", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Group 3A", "answer":"3", "userAnswer":"", "completed":false, "graded":false},
+        {"question":"Number of valence electrons for the Group 5A", "answer":"5", "userAnswer":"", "completed":false, "graded":false},         
+        {"question":"5 Characteristics of Metals", "answer":"Shinny, Magnectic, malleable, Positive ion, ductile ", "userAnswer":"", "completed":false, "graded":false},  
+        {"question":"5 Characteristics of Non-metals", "answer":"Negative Ion, Poor Conducter, Not Ductile, Not malleable, Not lustrous (shiny))", "userAnswer":"", "completed":false, "graded":false}],"Science Chapter 1"
     ];
     
 return {    

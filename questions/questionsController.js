@@ -113,3 +113,15 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
 			});
 		};
 	});
+
+	myApp.directive('clickable',function(){
+		return function(scope,element,attrs){
+			element.bind("click",function(){				
+				var fields=$(this).parents('form:eq(0),body').find('textarea');
+				var currentIndex = element.attr('index');
+				var index=Number(currentIndex) + 1;
+				fields[index].focus();
+
+			});
+		};
+	});

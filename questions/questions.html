@@ -21,7 +21,7 @@
                 <div ng-show="takingTest">
                     <div class="col s6">
                         <!-- Student click this button to submit answer and disable field/button-->
-                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
+                        <a clickable index="{{$index}}" class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
                         Done                    
                         </a> 
                     </div>

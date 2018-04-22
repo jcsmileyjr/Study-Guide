@@ -29,7 +29,7 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     
     //initialize the variable use to disable "check your answers" button based on the number of test questions to ensure student complete form
     $scope.completeEveryQuestion = true;
-    
+
     //function to get student answer to a question saved to the question object it came from    
     $scope.done = function(index, answer){
         //Use the service to record the student's answer
@@ -47,6 +47,15 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             
         }
     }
+	
+	//tip from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_keycode
+	//Use the above done command but as a "enter" keyboard event
+	$scope.DoneWithKeyboardEnterCommand = function($event, index, answer){
+		var x = $event.keyCode;
+		if(x == 13)
+			$scope.done(index, answer);
+	}
+    
     
     //function to switch student from taking test to grading of the test
     $scope.checkAnswers = function(){
@@ -88,10 +97,5 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             $scope.enableFinishButton = false;
         }
         
-    }
-    
-    
-    
-
-
+    }// end of gradeAnswer function
 });//end of Controller

@@ -10,7 +10,7 @@
                     <!-- Question-->    
                     <strong>{{$index + 1}}. {{guide.question}}</strong>
                     <!-- Answer-->    
-                    <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer"></textarea>                      
+                    <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer" ng-keypress="DoneWithKeyboardEnterCommand($event, $index, userAnswer)"></textarea>                      
                 </div>
                 <!-- Show this div when app start for student to type answers-->
                 <div ng-show="takingTest">

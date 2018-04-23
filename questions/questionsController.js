@@ -126,18 +126,3 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
 			});
 		};
 	});
-
-	//directive based on user clickin the done button for the current question. This will move the focus to the next textarea input element. 
-	myApp.directive('clickReset',function(){	//"clickable" is the name of the directive
-		return function(scope,element,attrs){	//allows the use of the DOM element & attribute
-			element.bind("click",function(){	//triggers the event				
-				var fields=$(this).parents('form:eq(0),body').find('textarea');//get all textarea elements on the page and places into an array call fields
-				console.table(fields);
-				var currentIndex = element.attr('index');	//gets the current element (link) attribute  "index" and places it into a variable. *****ITS A STRING*****
-				console.log("currentIndex " + currentIndex);
-				var index=currentIndex;	//Converts the string into a number and adds one to it to creat the next element. 
-				console.log("index " + index);
-				fields[index].focus();	//moves the focus to the next element in the array of textarea based on the current link element index plus one
-			});
-		};
-	});

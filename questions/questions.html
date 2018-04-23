@@ -9,14 +9,20 @@
                 <div input-field>
                     <!-- Question-->    
                     <strong>{{$index + 1}}. {{guide.question}}</strong>
-                    <!-- Answer-->    
-                    <textarea class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="answer"></textarea>                      
+					
+                    <!-- The user inputs the answer here. The ng-disabled attribute will changes-->
+					<!--The "userAnswer" variable is the answer given by the user and use in the controller.-->
+					<!--The id attribute identify the question. -->
+					<!--The ng-disabled attribute changes this unique question's completed value to true, therefore disabling the done button below it -->
+					<!--The ng-keypress attribute allows the user to press the "enter" keyboard command that stimulates the done button below(submit answer and disable button) -->
+                    <textarea enter class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here" required ng-disabled="guide.completed==true" id="{{$index + 1}}" ng-keypress="DoneWithKeyboardEnterCommand($event, $index, userAnswer)" tabindex="{{$index + 1}}"></textarea>                      
                 </div>
                 <!-- Show this div when app start for student to type answers-->
                 <div ng-show="takingTest">
                     <div class="col s6">
-                        <!-- Student click this button to submit answer and disable field-->
-                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
+                        <!-- Student click this button to submit answer and disable field/button-->
+						<!-- the clickable directive and attribute index allow the user to click the link causing the done() method and auto focus to the next textarea -->
+                        <a clickable index="{{$index}}" class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
                         Done                    
                         </a> 
                     </div>
@@ -33,28 +39,22 @@
                              {{guide.answer}}
                     </p>
                     <!-- Allow the user to choose if the given answer is correct or incorrect compare to the correct answer-->
-                    <div class="col s8">
+                    <div class="col s12">
                         <label>
-                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="correct">
-                            <span>Correct</span>
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="correct"  ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                            <span class="black-text">Correct</span>
                         </label>
-                        <label>
-                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="incorrect">
-                            <span>Incorrect</span>
+                        <label id="spaceBetweenRadioOptions">
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="incorrect"  ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                            <span class="black-text">Incorrect</span>
                         </label>
-                    </div>
-                    <div class="col s4">
-                        <!-- Student click this button to submit answer and disable field-->
-                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
-                        Done                    
-                        </a>                        
                     </div>
                 </div>                    
             </form>
         </div>
         <div class="col s12 center flow-text" ng-show="takingTest">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
-            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion">
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion" ui-sref="questions({'#':'1'})">
                 <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
                 Check Answers
             </a>            
@@ -71,5 +71,6 @@
 </div>
 <script>
     /*code */
-   
+
+	
 </script>

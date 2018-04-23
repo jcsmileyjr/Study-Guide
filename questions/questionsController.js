@@ -29,7 +29,7 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     
     //initialize the variable use to disable "check your answers" button based on the number of test questions to ensure student complete form
     $scope.completeEveryQuestion = true;
-    
+
     //function to get student answer to a question saved to the question object it came from    
     $scope.done = function(index, answer){
         //Use the service to record the student's answer
@@ -47,6 +47,15 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             
         }
     }
+	
+	//tip from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_keycode
+	//Use the above done command but as a "enter" keyboard event
+	$scope.DoneWithKeyboardEnterCommand = function($event, index, answer){
+		var x = $event.keyCode;	//use the event to determine the keyboard code from the ng-keypress directive.
+		if(x == 13)	// if the key code is the keyboard enter key
+			$scope.done(index, answer);	//run the done method
+	}
+    
     
     //function to switch student from taking test to grading of the test
     $scope.checkAnswers = function(){
@@ -88,10 +97,33 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             $scope.enableFinishButton = false;
         }
         
-    }
-    
-    
-    
-
-
+    }// end of gradeAnswer function
 });//end of Controller
+
+	//directive based on user pressing the enter key on the textarea input element. This will move the focus to the next textarea input element. 
+	myApp.directive('enter',function(){	//"enter" is the name of the directive
+		return function(scope,element,attrs){	//allows the use of the DOM element & attribute
+			element.bind("keypress",function(event){	//triggers the event
+				if(event.which===13){	//event code (enter button) that triggers the method
+					event.preventDefault();
+					var fields=$(this).parents('form:eq(0),body').find('textarea');	//get all textarea elements on the page and places into an array call fields
+					var index=fields.index(this);	//"this" refer to the current element. The current index of the current index in the array of elements
+					if(index> -1&&(index+1)<fields.length)
+						fields.eq(index+1).focus();	//move focus to the next array in fields based on the current element. 
+				}
+			});
+		};
+	});
+	
+	//directive based on user clickin the done button for the current question. This will move the focus to the next textarea input element. 
+	myApp.directive('clickable',function(){	//"clickable" is the name of the directive
+		return function(scope,element,attrs){	//allows the use of the DOM element & attribute
+			element.bind("click",function(){	//triggers the event				
+				var fields=$(this).parents('form:eq(0),body').find('textarea');//get all textarea elements on the page and places into an array call fields
+				var currentIndex = element.attr('index');	//gets the current element (link) attribute  "index" and places it into a variable. *****ITS A STRING*****
+				var index=Number(currentIndex) + 1;	//Converts the string into a number and adds one to it to creat the next element.
+				if(Number(currentIndex)> -1&&(Number(currentIndex)+1)<fields.length)
+					fields[index].focus();	//moves the focus to the next element in the array of textarea based on the current link element index plus one
+			});
+		};
+	});

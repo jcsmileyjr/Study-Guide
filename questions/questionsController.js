@@ -121,8 +121,9 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
 			element.bind("click",function(){	//triggers the event				
 				var fields=$(this).parents('form:eq(0),body').find('textarea');//get all textarea elements on the page and places into an array call fields
 				var currentIndex = element.attr('index');	//gets the current element (link) attribute  "index" and places it into a variable. *****ITS A STRING*****
-				var index=Number(currentIndex) + 1;	//Converts the string into a number and adds one to it to creat the next element. 
-				fields[index].focus();	//moves the focus to the next element in the array of textarea based on the current link element index plus one
+				var index=Number(currentIndex) + 1;	//Converts the string into a number and adds one to it to creat the next element.
+				if(Number(currentIndex)> -1&&(Number(currentIndex)+1)<fields.length)
+					fields[index].focus();	//moves the focus to the next element in the array of textarea based on the current link element index plus one
 			});
 		};
 	});

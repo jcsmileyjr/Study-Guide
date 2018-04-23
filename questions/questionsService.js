@@ -12,18 +12,6 @@ myApp.factory('TestData',  function () {
         {"question":"an element that has properties of both metals and nonmetals", "answer":"metalloids", "userAnswer":"", "completed":false, "graded":false},
         {"question":"What is the classification of most elements on the periodic table", "answer":"Metals", "userAnswer":"", "completed":false, "graded":false},
         {"question":"Group number and example for Alkali Metals", "answer":"Group 1 & Li, Na, Ls", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Group number and example for Alkaliine Earth Metals", "answer":"Group 2 & Be, Mg, Ca", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Group number and example for Halogens", "answer":"Group 17 & F, C1, Br", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Group number and example for Noble Gases", "answer":"Group 18 & He, Ne, Ar", "userAnswer":"", "completed":false, "graded":false}, 
-        {"question":"Example of a transition metal", "answer":"silver", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Transition elements are located between which two groups", "answer":"3 and 12", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Metals are located to the ____ and ____ of the metalloid line", "answer":"Left and Under", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Non-Metals are located to the _____ and ____ of the metalliod line", "answer":"Right and Above", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"A non-metal that is not located to the right and above the metalliod line", "answer":"Hydrogen", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Energy levels ______ as you move down a group", "answer":"Increase", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What is the only metal that is a liquid at room temperature", "answer":"mercury", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"What is an Ion", "answer":"an atom , radical, or molecule taht has gain or lost one or more electrons", "userAnswer":"", "completed":false, "graded":false},
-        {"question":"Do metals gain or lose electrons when they form ions", "answer":"Lose", "userAnswer":"", "completed":false, "graded":false},
         ],"Science Chapter 1"
     ];
     

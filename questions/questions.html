@@ -21,6 +21,7 @@
                 <div ng-show="takingTest">
                     <div class="col s6">
                         <!-- Student click this button to submit answer and disable field/button-->
+						<!-- the clickable directive and attribute index allow the user to click the link causing the done() method and auto focus to the next textarea -->
                         <a clickable index="{{$index}}" class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
                         Done                    
                         </a> 

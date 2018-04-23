@@ -19,15 +19,19 @@
                 </div>
                 <!-- Show this div when app start for student to type answers-->
                 <div ng-show="takingTest">
-                    <div class="col s6">
+                    <div class="col m6 show-on-medium-and-up">
                         <!-- Student click this button to submit answer and disable field/button-->
 						<!-- the clickable directive and attribute index allow the user to click the link causing the done() method and auto focus to the next textarea -->
                         <a clickable index="{{$index}}" class="waves-effect waves-light btn orange accent-3 black-text" ng-click="done($index, userAnswer)" ng-disabled="guide.completed==true">
                         Done                    
                         </a> 
                     </div>
+                    <!--The encouragement div under the questions only shows on mobile views.  -->
+                    <div class="col s9 show-on-small orange lighten-3 z-depth-1" >  
+                        <p class="center">{{encouragement}} </p>                 
+                    </div>                    
                     <!-- Student click this button to submit reset answer-->
-                    <div class="col s6 right-align">
+                    <div class="col s3 m6 right-align">
                         <input class="grey-text red lighten-5 btn" type="reset" ng-disabled="guide.completed==true">                    
                     </div>
                 </div>

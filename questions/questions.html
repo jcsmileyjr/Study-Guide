@@ -39,21 +39,15 @@
                              {{guide.answer}}
                     </p>
                     <!-- Allow the user to choose if the given answer is correct or incorrect compare to the correct answer-->
-                    <div class="col s8">
+                    <div class="col s12">
                         <label>
-                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="correct">
-                            <span>Correct</span>
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="correct"  ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                            <span class="black-text">Correct</span>
                         </label>
-                        <label>
-                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="incorrect">
-                            <span>Incorrect</span>
+                        <label id="spaceBetweenRadioOptions">
+                            <input name="gradeAnswer" type="radio" ng-model="checkMyAnswer" value="incorrect"  ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
+                            <span class="black-text">Incorrect</span>
                         </label>
-                    </div>
-                    <div class="col s4">
-                        <!-- Student click this button to submit answer and disable field-->
-                        <a class="waves-effect waves-light btn orange accent-3 black-text" ng-click="gradeAnswer(checkMyAnswer, $index)" ng-disabled="guide.graded==true">
-                        Done                    
-                        </a>                        
                     </div>
                 </div>                    
             </form>

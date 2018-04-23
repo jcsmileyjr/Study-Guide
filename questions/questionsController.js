@@ -56,6 +56,11 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
 			$scope.done(index, answer);	//run the done method
 	}
     
+    //method to show the completion rate every 3 questions answer for a few seconds.
+    $scope.showCompletionPopUP = function(){
+
+    }
+    
     
     //function to switch student from taking test to grading of the test
     $scope.checkAnswers = function(){

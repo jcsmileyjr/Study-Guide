@@ -68,7 +68,11 @@
             <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ui-sref="finalGrade" ng-disabled= "enableFinishButton">
                 Final Grade
             </a>
-        </div>        
+        </div>
+        <!--show test compeletion rate in mobile view-->
+        <div class="show-on-small completionPopUp orange lighten-3 black-text flow-text">
+            <strong class="black-text ">Completed: {{currentCompletionRate| number: 0}}%</strong>
+        </div>
         
         
     </div>

@@ -21,6 +21,9 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
     //get test data from the TestData service to be displayed 
     $scope.studyQuestions = TestData.getData("scienceChp1"); 
 	
+	//get a array of answers based on the current test to display
+	$scope.answersToQuestions = TestData.getListOfAnswers($scope.currentTest);	
+	
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;
     

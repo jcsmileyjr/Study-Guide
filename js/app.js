@@ -19,6 +19,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $u
             url:'/finalGrade',
             templateUrl: 'final grade/finalGrade.html',
             controller: "finalGradeController"
-        })     
+        }) 
+	
     
 }]);

@@ -15,7 +15,7 @@
 					<!--The id attribute identify the question. -->
 					<!--The ng-disabled attribute changes this unique question's completed value to true, therefore disabling the done button below it -->
 					<!--The ng-keypress attribute allows the user to press the "enter" keyboard command that stimulates the done button below(submit answer and disable button) -->
-                    <textarea enter class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Answers go here. Enter button to submit" required ng-disabled="guide.completed==true" id="{{$index + 1}}" ng-keypress="DoneWithKeyboardEnterCommand($event, $index, userAnswer)" tabindex="{{$index + 1}}"></textarea>                      
+                    <textarea enter class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Press ENTER to submit answers" required ng-disabled="guide.completed==true" id="{{$index + 1}}" ng-keypress="DoneWithKeyboardEnterCommand($event, $index, userAnswer)" tabindex="{{$index + 1}}"></textarea>                      
                 </div>
                 <!-- Show this div when app start for student to type answers-->
                 <div ng-show="takingTest">

@@ -2,14 +2,22 @@
     <div class="col s12">
         <div class="center-align">
             <strong class="flow-text">{{studyTestName}}</strong>
-        </div>		
+        </div>
+		  <div id="modal2" class="modal">
+			<div class="modal-content">
+			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
+			</div>
+			<div class="modal-footer">
+			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
+			</div>
+		  </div>		
         <!-- study guide questions and student answer's input boxes -->
         <div class="col s12 m6">
 			<div ng-repeat="guide in studyQuestions">
             <form class="flow-text section" name="myform" novalidate>
                 <div input-field>
                     <!-- Question-->    
-                    <strong ng-class="{disableQuestion:guide.completed}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up" ui-sref="answersList"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
+                    <strong ng-class="{disableQuestion:guide.completed}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up modal-trigger" href="#modal2"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
 					
                     <!-- The user inputs the answer here. The ng-disabled attribute will changes-->
 					<!--The "userAnswer" variable is the answer given by the user and use in the controller.-->
@@ -19,6 +27,7 @@
                     <textarea enter class="z-depth-1 materialize-textarea" ng-model="userAnswer" placeholder="Press ENTER to submit answers" required ng-disabled="guide.completed==true" id="{{$index + 1}}" ng-keypress="DoneWithKeyboardEnterCommand($event, $index, userAnswer)" tabindex="{{$index + 1}}">{{guide.userAnswer}}</textarea>
 					
                 </div>
+				
                 <!-- Show this div when app start for student to type answers-->
                 <div ng-show="takingTest">
                     <div class="col m6 hide-on-small-only">
@@ -80,8 +89,15 @@
         <div class="hide-on-med-and-up completionPopUp orange-text flow-text" ng-show = "showCompletionRate">
             <strong class="black-text ">Completed: {{currentCompletionRate| number: 0}}%</strong>
         </div>
-        
-        
+				  <!-- Modal Structure -->
+		  <div id="modal2" class="modalHints">
+			<div class="modal-content">
+			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
+			</div>
+			<div class="modal-footer">
+			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
+			</div>
+		  </div>
     </div>
 </div>
 <script>
@@ -99,4 +115,6 @@ $(window).scroll(function(e){
   } 
 }); 
 	
+    var hints = document.querySelector('#modal2');
+    var instance = M.Modal.init(hints, {dismissible: true});
 </script>

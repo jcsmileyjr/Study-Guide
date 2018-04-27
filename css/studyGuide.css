@@ -71,10 +71,10 @@ label {
     text-align: center;
 }
 
-/*increase height between test name and hint list
-.fixedHints {
-	margin-top: 0px;
-}*/
+/*grey out question to simulate being disabled*/
+.disableQuestion {
+	color:darkgrey;
+}
 
 /*increase space between hints*/
 .spaceBetweenHints {

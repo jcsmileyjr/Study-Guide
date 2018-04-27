@@ -1,4 +1,4 @@
-myApp.controller('questionsController',  function($scope, TestData, Score){  
+myApp.controller('questionsController',  function($scope,$window, TestData, Score){  
     
     //initialize varible use to show the "done" and "reset' buttons on the questions page
     $scope.takingTest = true;
@@ -14,10 +14,13 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     
     //get test name from the TestData service to be displayed 
     $scope.studyTestName = TestData.getTestName("scienceChp1");
+	
+	//Update the chosen test with encouragement and instructions
+	TestData.upgradeData($scope.currentTest);	
     
     //get test data from the TestData service to be displayed 
-    $scope.studyQuestions = TestData.getData("scienceChp1");    
-    
+    $scope.studyQuestions = TestData.getData("scienceChp1"); 
+	
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;
     
@@ -29,6 +32,9 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
     
     //initialize the variable use to disable "check your answers" button based on the number of test questions to ensure student complete form
     $scope.completeEveryQuestion = true;
+    
+    //variable link to the mobile completion rate popup div
+    $scope.showCompletionRate = false;
 
     //function to get student answer to a question saved to the question object it came from    
     $scope.done = function(index, answer){
@@ -46,6 +52,8 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
             $scope.completeEveryQuestion = false;
             
         }
+        
+        $scope.showCompletionRatePopUp();
     }
 	
 	//tip from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_keycode
@@ -55,6 +63,23 @@ myApp.controller('questionsController',  function($scope, TestData, Score){
 		if(x == 13)	// if the key code is the keyboard enter key
 			$scope.done(index, answer);	//run the done method
 	}
+    
+    //method to show the completion rate every 3 questions answer for a few seconds.
+    $scope.showCompletionRatePopUp = function(){
+        $scope.updatedNumber = Score.getQuestionsAnswered();
+        console.log($scope.updatedNumber);
+        if(($scope.updatedNumber % 3)!==0){
+            $scope.showCompletionRate = true;
+            $window.setTimeout($scope.hideCompletionRatePopUp, 1000); 
+        }
+
+        console.log($scope.updatedNumber % 3);
+    }
+    
+    
+    $scope.hideCompletionRatePopUp = function(){
+        $scope.showCompletionRate = false;
+    }
     
     
     //function to switch student from taking test to grading of the test

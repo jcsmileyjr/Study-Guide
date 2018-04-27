@@ -28,6 +28,18 @@ myApp.factory('TestData',  function (Score) {
     ];	
     
 return {
+		//from "Index-cards" vocabularyService.js
+		//create an array of answers from the selected test
+		getListOfAnswers: function(test){
+			//test if any array of objects matches "test"
+			switch(test){
+				case "scienceChp1":
+					//create a new array of just answers from the test
+					var arrayOfAnswers = scienceChp1[0].map(function(x){return x.answer});
+					arrayOfAnswers.sort();	//sort the array alphabetically
+					return arrayOfAnswers;
+			}		
+		},	
 		//update an exsisting test to include random encouragment
 		upgradeData: function(test){
 			//test if any array of objects matches "test"

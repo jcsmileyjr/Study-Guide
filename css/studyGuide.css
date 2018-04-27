@@ -51,6 +51,7 @@ label {
     margin-top: -15px;
 }
 
+/*increase height between radio optios*/
 #spaceBetweenRadioOptions {
 	margin-top: 20px;
 }
@@ -69,6 +70,17 @@ label {
     margin: 0 auto;
     text-align: center;
 }
+
+/*increase height between test name and hint list
+.fixedHints {
+	margin-top: 0px;
+}*/
+
+/*increase space between hints*/
+.spaceBetweenHints {
+	margin-top: 20px;
+}
+
 
 
 

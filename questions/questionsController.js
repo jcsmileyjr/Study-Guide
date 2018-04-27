@@ -14,10 +14,13 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
     
     //get test name from the TestData service to be displayed 
     $scope.studyTestName = TestData.getTestName("scienceChp1");
+	
+	//Update the chosen test with encouragement and instructions
+	TestData.upgradeData($scope.currentTest);	
     
     //get test data from the TestData service to be displayed 
-    $scope.studyQuestions = TestData.getData("scienceChp1");    
-    
+    $scope.studyQuestions = TestData.getData("scienceChp1"); 
+	
     //determine how many questions are in the test for grading
     $scope.numberOfTestQuestions = $scope.studyQuestions.length;
     

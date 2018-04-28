@@ -4,14 +4,15 @@
             <strong class="flow-text">{{studyTestName}}</strong>
         </div>
 		<!--pop up modal use to show list of hints/answers when user press the icon besides each question. -->
-		  <div id="modal2" class="modal">
+		<div id="modal2" class="modal">
 			<div class="modal-content">
-			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
+				<h4 class="underlineTitle">List of Hints</h4>
+				<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
 			</div>
 			<div class="modal-footer">
-			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
+			  	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
 			</div>
-		  </div>		
+		 </div>		
         <!-- study guide questions and student answer's input boxes -->
         <div class="col s12 m6">
 			<div ng-repeat="guide in studyQuestions">
@@ -71,6 +72,7 @@
         </div>
 		<!--show list of hints -->
 		<div class="col m6 hide-on-small-only fixedHints" >
+			<h4 class="underlineTitle">List of Hints</h4>
 			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>			
 		</div>		
         <div class="col s12 center flow-text" ng-show="takingTest">

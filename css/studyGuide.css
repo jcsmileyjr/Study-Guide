@@ -86,6 +86,11 @@ label {
 	text-decoration: line-through;
 }
 
+/*underline the title in the hints feature*/
+.underlineTitle {
+	text-decoration: underline;
+}
+
 
 
 

@@ -81,6 +81,11 @@ label {
 	margin-top: 20px;
 }
 
+/*strike through the question while grading the answers to show its done*/
+.strikeThroughQuestion {
+	text-decoration: line-through;
+}
+
 
 
 

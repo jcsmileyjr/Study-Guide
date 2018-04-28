@@ -19,7 +19,7 @@
             <form class="flow-text section" name="myform" novalidate>
                 <div input-field>
                     <!-- Question-->    
-                    <strong ng-class="{disableQuestion:guide.completed, strikeThroughQuestion:guide.graded}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up modal-trigger" href="#modal2"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
+                    <strong ng-class="{disableQuestion:guide.completed, strikeThroughQuestion:guide.graded}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up modal-trigger" ng-if="guide.completed==false" href="#modal2"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
 					
                     <!-- The user inputs the answer here. The ng-disabled attribute will changes-->
 					<!--The "userAnswer" variable is the answer given by the user and use in the controller.-->

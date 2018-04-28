@@ -69,14 +69,18 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
     
     //method to show the completion rate every 3 questions answer for a few seconds.
     $scope.showCompletionRatePopUp = function(){
+		/*
         $scope.updatedNumber = Score.getQuestionsAnswered();
         console.log($scope.updatedNumber);
         if(($scope.updatedNumber % 3)!==0){
             $scope.showCompletionRate = true;
             $window.setTimeout($scope.hideCompletionRatePopUp, 1000); 
         }
-
+		
         console.log($scope.updatedNumber % 3);
+		*/
+            $scope.showCompletionRate = true;
+            $window.setTimeout($scope.hideCompletionRatePopUp, 1000);		
     }
     
     

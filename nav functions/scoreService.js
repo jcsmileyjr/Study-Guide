@@ -7,7 +7,7 @@ myApp.factory('Score', [ function () {
     var completionBoard= {"showCompletion":true};
     var completionRate = {"numberOfQuestions":0, "numberOfQuestionsCompleted":0};
     
-    var positiveFeedBack = ["Press the enter button to submit answer", "Good Job, Baby", "Besides chocolate, you are my favorite", "You are doing a Awesome job", "Press the enter button to submit answer", "I love  you", "You can do it", "Get that A, Get that A", "Press the enter button to submit answer", "You are the Best", "Super-smart, that's what you are", "Press the enter button to submit answer", "Please Lord, help this child of mine", "Press the enter button to submit answer", "If you need help, come get me", "I turned out liking you a lot more than I originally planned", "Good friends don't let you do stupid things...alone", "Press the enter button to submit answer"];
+    var positiveFeedBack = ["Good Job, Baby", "Besides chocolate, you are my favorite", "You are doing a Awesome job", "I love  you", "You can do it", "Get that A, Get that A", "You are the Best", "Super-smart, that's what you are", "Please Lord, help this child of mine", "If you need help, come get me", "I turned out liking you a lot more than I originally planned", "Good friends don't let you do stupid things...alone"];
      
      return {
          

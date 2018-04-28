@@ -89,26 +89,25 @@
             </a>
         </div>
         <!--show test compeletion rate in mobile view-->
-        <div class="hide-on-med-and-up completionPopUp orange-text flow-text" ng-show = "showCompletionRate">
+        <div class="hide-on-med-and-up completionPopUp orange lighten-3 flow-text" ng-show = "showCompletionRate">
             <strong class="black-text ">Completed: {{currentCompletionRate| number: 0}}%</strong>
         </div>
     </div>
 </div>
 <script>
     /*code */
-/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
-$(window).scroll(function(e){ 
-  var $hints = $('.fixedHints'); 
-  var isHintsFixed = ($hints.css('position') == 'fixed');
-  if ($(this).scrollTop() > 100 && !isHintsFixed){ 
-    $('.fixedHints').css({'position': 'fixed', 'top': '0px', 'right':'0px'}); 
-  }
-  if ($(this).scrollTop() < 100 && isHintsFixed)
-  {
-    $('.fixedHints').css({'position': 'static', 'top': '0px'}); 
-  } 
-}); 
+	/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
+	$(window).scroll(function(e){ 
+	  var $hints = $('.fixedHints'); 
+	  var isHintsFixed = ($hints.css('position') == 'fixed');
+	  if ($(this).scrollTop() > 100 && !isHintsFixed){ 
+		$('.fixedHints').css({'position': 'fixed', 'top': '20px', 'right':'0px'}); 
+	  }
+	  if ($(this).scrollTop() < 100 && isHintsFixed)
+	  {
+		$('.fixedHints').css({'position': 'static', 'top': '0px'}); 
+	  } 
+	}); 
+
 	
-    var hints = document.querySelector('#modal2');
-    var instance = M.Modal.init(hints, {dismissible: true});
 </script>

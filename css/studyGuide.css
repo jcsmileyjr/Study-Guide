@@ -58,9 +58,8 @@ label {
 
 /* mobile test completion rate pop-up*/
 .completionPopUp {
-    height: 100px;
+    height: 60px;
     width: 100px;
-    /*border-radius:50%; */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -78,7 +77,9 @@ label {
 
 /*increase space between hints*/
 .spaceBetweenHints {
-	margin-top: 20px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 /*strike through the question while grading the answers to show its done*/

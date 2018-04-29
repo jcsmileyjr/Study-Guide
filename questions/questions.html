@@ -99,8 +99,8 @@
             </a>
         </div>
         <!--show test compeletion rate in mobile view-->
-        <div class="hide-on-med-and-up completionPopUp orange lighten-3 flow-text" ng-show = "showCompletionRate">
-            <strong class="black-text ">Completed: {{currentCompletionRate| number: 0}}%</strong>
+        <div id="mobileCompletionRate" class="hide-on-med-and-up completionPopUp orange lighten-3 flow-text" ng-show = "showCompletionRate">
+            <strong class="black-text ">Completed: {{CompletionRate| number: 0}}%</strong>
         </div>
 		
     </div>
@@ -120,13 +120,16 @@
 	  } 
 	}); 
 	
+	var mobileCompletionRate = document.querySelector('#mobileCompletionRate');
+	console.log(mobileCompletionRate);
+		
 	/*code for grading model to show instructions on how to grade test*/
     var grading = document.querySelector('#grading');
     var gradinginstance = M.Modal.init(grading);	
 	
+	/*opens the grading modal use to show instructions on how to grade answers*/
 	function gradingInstructions(){
 		gradinginstance.open();
-		console.log("Its working");
 	};	
 	
 	

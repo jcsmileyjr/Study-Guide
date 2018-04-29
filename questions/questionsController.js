@@ -38,6 +38,9 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
     
     //variable link to the mobile completion rate popup div
     $scope.showCompletionRate = false;
+	
+	//initalize the completion rate of the test to show to the user in mobile view
+	$scope.CompletionRate = 0;
 
     //function to get student answer to a question saved to the question object it came from    
     $scope.done = function(index, answer){
@@ -56,6 +59,7 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
             
         }
         
+		//show a popup in mobile view of the current completion rate of the test
         $scope.showCompletionRatePopUp();
     }
 	
@@ -69,22 +73,20 @@ myApp.controller('questionsController',  function($scope,$window, TestData, Scor
     
     //method to show the completion rate every 3 questions answer for a few seconds.
     $scope.showCompletionRatePopUp = function(){
-		/*
-        $scope.updatedNumber = Score.getQuestionsAnswered();
-        console.log($scope.updatedNumber);
-        if(($scope.updatedNumber % 3)!==0){
-            $scope.showCompletionRate = true;
-            $window.setTimeout($scope.hideCompletionRatePopUp, 1000); 
-        }
-		
-        console.log($scope.updatedNumber % 3);
-		*/
-            $scope.showCompletionRate = true;
-            $window.setTimeout($scope.hideCompletionRatePopUp, 1000);		
+
+		//update how many more question is remaining.
+        $scope.CompletionRate = Score.getCompletionRate();
+        
+		//change the varible that shows the completion rate pop-up in mobile view
+		$scope.showCompletionRate = true;
+        
+		//set a one second timeout to briefly show the completion rate
+		$window.setTimeout($scope.hideCompletionRatePopUp, 300);		
     }
     
     
     $scope.hideCompletionRatePopUp = function(){
+		//change the varible to re-hide teh completion rate pop up in mobile view
         $scope.showCompletionRate = false;
     }
     

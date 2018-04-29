@@ -13,7 +13,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body ng-app="StudyGuide"  ng-controller="navFunctionsController">
+    <body ng-app="StudyGuide"  ng-controller="navFunctionsController"  onload="startupInstructions()">
         <div class="row ">
         <header class="spaceBetweenNavMain">
             <div class="">        
@@ -47,11 +47,11 @@
                             Restart Test
                         </a>
                         
-                        <!-- Route student to loadTest page to choose a new test to take-->
+                        <!-- Route student to loadTest page to choose a new test to take
                         <a class="btn orange darken-4 black-text"  ui-sref="loadTest">
                             Choose a Different Test
                         </a>                        
-                        
+                        -->
                     </div>
                     <div class="modal-footer">
                       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -63,7 +63,18 @@
             <!-- encouragment animation area. Only show with tablets and higher views -->  
             <div class="fixedElement col m12 hide-on-small-only orange lighten-3 z-depth-1" >  
                 <p class="center target">{{encouragement}} </p>                 
-            </div>             
+            </div>
+		
+		<!--pop up modal use to show instructions when app start -->
+		<div id="intro" class="modal center">
+			<div class="modal-content orange lighten-3">
+				<h4 class="underlineTitle ">Instructions</h4>
+				<p class="black-text ">Press the enter button to submit answer</p>
+			</div>
+			<div class="modal-footer">
+			  	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+			</div>
+		 </div>				
         </div>
         <div class="row">
            
@@ -106,18 +117,32 @@
     var elem = document.querySelector('.modal');
     var instance = M.Modal.init(elem);
 
-/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
-$(window).scroll(function(e){ 
-  var $el = $('.fixedElement'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 100 && !isPositionFixed){ 
-    $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
-  }
-  if ($(this).scrollTop() < 100 && isPositionFixed)
-  {
-    $('.fixedElement').css({'position': 'static', 'top': '0px'}); 
-  } 
-});   
+	/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
+	$(window).scroll(function(e){ 
+	  var $el = $('.fixedElement'); 
+	  var isPositionFixed = ($el.css('position') == 'fixed');
+	  if ($(this).scrollTop() > 100 && !isPositionFixed){ 
+		$('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
+	  }
+	  if ($(this).scrollTop() < 100 && isPositionFixed)
+	  {
+		$('.fixedElement').css({'position': 'static', 'top': '0px'}); 
+	  } 
+	});
+	
+
+	/*code for hints feature model open when user click the receipt icon be each question*/
+    var hints = document.querySelector('#modal2');
+    var instance = M.Modal.init(hints, {dismissible: true});
+	
+	/*code for intro model to show instructions*/
+    var intro = document.querySelector('#intro');
+    var introinstance = M.Modal.init(intro);	
+	
+	//function use in the on-load JS method to load the intro mobel at app start
+	function startupInstructions(){
+		introinstance.open();
+	}	
     
 </script>
     </body>

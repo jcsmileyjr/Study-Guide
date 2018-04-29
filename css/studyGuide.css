@@ -60,8 +60,8 @@ label {
 .completionPopUp {
     height: 100px;
     width: 100px;
-    border-radius:50%; 
-    position: absolute;
+    /*border-radius:50%; */
+    position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -100px;
@@ -79,6 +79,16 @@ label {
 /*increase space between hints*/
 .spaceBetweenHints {
 	margin-top: 20px;
+}
+
+/*strike through the question while grading the answers to show its done*/
+.strikeThroughQuestion {
+	text-decoration: line-through;
+}
+
+/*underline the title in the hints feature*/
+.underlineTitle {
+	text-decoration: underline;
 }
 
 

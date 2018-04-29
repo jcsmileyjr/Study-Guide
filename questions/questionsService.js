@@ -3,25 +3,25 @@ myApp.factory('TestData',  function (Score) {
     
     var scienceChp1 = [        
 
-        [{"question":"What is the periodic law", "answer":"The law that states that the repeating chemical and physical properties of elements change periodically with the atomic number of the element", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        [{"question":"The color of an Apple", "answer":"Red", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Father of the Periodic table is ", "answer":"Mendeleev", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of an Orange", "answer":"Orange", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Mendeleev arrange the Periodic table by?", "answer":"Atomic Mass", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of an Grape", "answer":"Purple", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Mosley arranged the periodic table according to increasing", "answer":"atomic numbers", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of an fresh cut grass", "answer":"Green", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"horizontal rows of periodic table are called", "answer":"periods", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of newly minted gold bars", "answer":"Gold", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"vertical columns of the periodic able are called", "answer":"roots", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of the night sky", "answer":"Black", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"On the periodic table, Family is another name for a ", "answer":"Group", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of an a shiny quater", "answer":"Silver", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"an element that has properties of both metals and nonmetals", "answer":"metalloids", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of an mud", "answer":"Brown", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"What is the classification of most elements on the periodic table", "answer":"Metals", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of the sun", "answer":"Yellow", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Group number and example for Alkali Metals", "answer":"Group 1 & Li, Na, Ls", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of the ocean", "answer":"Blue", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
         ],"Science Chapter 1"
 

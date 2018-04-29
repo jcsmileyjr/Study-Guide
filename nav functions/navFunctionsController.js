@@ -1,4 +1,4 @@
-myApp.controller('navFunctionsController',  function($scope, $interval, $state, Score){
+myApp.controller('navFunctionsController',  function($scope, $interval, $state, $window, Score){
     //setup the initial encourgment
     $scope.encouragement = Score.getPositiveFeedBack(); 
     
@@ -21,7 +21,8 @@ myApp.controller('navFunctionsController',  function($scope, $interval, $state, 
     //restart the app by reloading the browser page
     $scope.restart = function(){
         $state.go("questions");
-        location.reload();
+        $window.location.reload();
+		
     }    
     
     //call the updateEncouragement function continously

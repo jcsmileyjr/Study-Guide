@@ -3,21 +3,33 @@
         <div class="center-align">
             <strong class="flow-text">{{studyTestName}}</strong>
         </div>
-		  <div id="modal2" class="modal">
+		<!--pop up modal use to show list of hints/answers when user press the icon besides each question. -->
+		<div id="modal2" class="modal">
 			<div class="modal-content">
-			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
+				<h4 class="underlineTitle">List of Hints</h4>
+				<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
 			</div>
 			<div class="modal-footer">
-			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
+			  	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
 			</div>
-		  </div>		
+		 </div>	
+		<!--pop up modal use to show instructions when grading answers -->
+		<div id="grading" class="modal center">
+			<div class="modal-content orange lighten-3">
+				<h4 class="underlineTitle ">Instructions</h4>
+				<p class="black-text ">Compare your answer to the Correct answer. Then click "Correct" or "Incorrect"</p>
+			</div>
+			<div class="modal-footer">
+			  	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+			</div>
+		 </div>			
         <!-- study guide questions and student answer's input boxes -->
         <div class="col s12 m6">
 			<div ng-repeat="guide in studyQuestions">
             <form class="flow-text section" name="myform" novalidate>
                 <div input-field>
                     <!-- Question-->    
-                    <strong ng-class="{disableQuestion:guide.completed}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up modal-trigger" href="#modal2"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
+                    <strong ng-class="{disableQuestion:guide.completed, strikeThroughQuestion:guide.graded}">{{$index + 1}}. {{guide.question}}<a class="hide-on-med-and-up modal-trigger" ng-if="guide.completed==false" href="#modal2"><i class="material-icons md-18 orange-text text-accent-3 ">receipt</i></a></strong>
 					
                     <!-- The user inputs the answer here. The ng-disabled attribute will changes-->
 					<!--The "userAnswer" variable is the answer given by the user and use in the controller.-->
@@ -70,11 +82,12 @@
         </div>
 		<!--show list of hints -->
 		<div class="col m6 hide-on-small-only fixedHints" >
+			<h4 class="underlineTitle">List of Hints</h4>
 			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>			
 		</div>		
         <div class="col s12 center flow-text" ng-show="takingTest">
             <!-- Student click this button to continue to next step in the app's process, checking the answers for correctness. edit is a good replacement for checkmark icon -->
-            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click="checkAnswers()" ng-disabled="completeEveryQuestion" ui-sref="questions({'#':'1'})">
+            <a class="pulse btn btn-large orange darken-4 black-text" id="submit" ng-click=" checkAnswers()"  modal-trigger ng-disabled="completeEveryQuestion" ui-sref="questions({'#':'1'})" onclick="gradingInstructions()">
                 <i class="material-icons md-36 orange-text text-lighten-3">edit</i>
                 Check Answers
             </a>            
@@ -86,35 +99,40 @@
             </a>
         </div>
         <!--show test compeletion rate in mobile view-->
-        <div class="hide-on-med-and-up completionPopUp orange-text flow-text" ng-show = "showCompletionRate">
-            <strong class="black-text ">Completed: {{currentCompletionRate| number: 0}}%</strong>
+        <div id="mobileCompletionRate" class="hide-on-med-and-up completionPopUp orange lighten-3 flow-text" ng-show = "showCompletionRate">
+            <strong class="black-text ">Completed: {{CompletionRate| number: 0}}%</strong>
         </div>
-				  <!-- Modal Structure -->
-		  <div id="modal2" class="modalHints">
-			<div class="modal-content">
-			<p class="black-text spaceBetweenHints" ng-repeat="answers in answersToQuestions">{{ answers }}</p>
-			</div>
-			<div class="modal-footer">
-			  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Go Back</a>
-			</div>
-		  </div>
+		
     </div>
 </div>
 <script>
     /*code */
-/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
-$(window).scroll(function(e){ 
-  var $hints = $('.fixedHints'); 
-  var isHintsFixed = ($hints.css('position') == 'fixed');
-  if ($(this).scrollTop() > 100 && !isHintsFixed){ 
-    $('.fixedHints').css({'position': 'fixed', 'top': '0px', 'right':'0px'}); 
-  }
-  if ($(this).scrollTop() < 100 && isHintsFixed)
-  {
-    $('.fixedHints').css({'position': 'static', 'top': '0px'}); 
-  } 
-}); 
+	/*tip from https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to*/
+	$(window).scroll(function(e){ 
+	  var $hints = $('.fixedHints'); 
+	  var isHintsFixed = ($hints.css('position') == 'fixed');
+	  if ($(this).scrollTop() > 100 && !isHintsFixed){ 
+		$('.fixedHints').css({'position': 'fixed', 'top': '20px', 'right':'0px'}); 
+	  }
+	  if ($(this).scrollTop() < 100 && isHintsFixed)
+	  {
+		$('.fixedHints').css({'position': 'static', 'top': '0px'}); 
+	  } 
+	}); 
 	
-    var hints = document.querySelector('#modal2');
-    var instance = M.Modal.init(hints, {dismissible: true});
+	var mobileCompletionRate = document.querySelector('#mobileCompletionRate');
+	console.log(mobileCompletionRate);
+		
+	/*code for grading model to show instructions on how to grade test*/
+    var grading = document.querySelector('#grading');
+    var gradinginstance = M.Modal.init(grading);	
+	
+	/*opens the grading modal use to show instructions on how to grade answers*/
+	function gradingInstructions(){
+		gradinginstance.open();
+	};	
+	
+	
+
+	
 </script>

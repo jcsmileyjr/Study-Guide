@@ -7,19 +7,17 @@ myApp.factory('TestData',  function (Score) {
 
         {"question":"South of the Sahara___languages are spoken?", "answer":"800", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Nomadic herding?", "answer":"Herders move their flocks to differnt pastrares throughout the year", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Herders move their flocks to differnt pastrares throughout the year", "answer":"Nomadic herding", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Leaching", "answer":"Dissolving and washing away of nutrients", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Dissolving and washing away of nutrients", "answer":"Leaching", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Gift of the Nile?", "answer":"Gold", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
-
-        {"question":"The color of the night sky", "answer":"Egypt", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Gift of the Nile?", "answer":"Egypt", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
         {"question":"World's longest river?", "answer":"Nile", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Nile Delta", "answer":"Nile fork into two branches, between 2 branches", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Nile fork into two branches, between 2 branches", "answer":"Nile Delta", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"Khamsin?", "answer":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Create sand storms that blow hot air,dust,and grint into the Nile Valley?", "answer":"Khamsin", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
         ],"World Geography Unit 4"
 

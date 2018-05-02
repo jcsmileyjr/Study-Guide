@@ -3,27 +3,25 @@ myApp.factory('TestData',  function (Score) {
     
     var scienceChp1 = [        
 
-        [{"question":"The color of an Apple", "answer":"Red", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        [{"question":"What did european trade guns for?", "answer":"Gold and Ivory", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of an Orange", "answer":"Orange", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"South of the Sahara___languages are spoken?", "answer":"800", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of an Grape", "answer":"Purple", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Nomadic herding?", "answer":"Herders move their flocks to differnt pastrares throughout the year", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of an fresh cut grass", "answer":"Green", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Leaching", "answer":"Dissolving and washing away of nutrients", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of newly minted gold bars", "answer":"Gold", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Gift of the Nile?", "answer":"Gold", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of the night sky", "answer":"Black", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"The color of the night sky", "answer":"Egypt", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of an a shiny quater", "answer":"Silver", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"World's longest river?", "answer":"Nile", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of an mud", "answer":"Brown", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Nile Delta", "answer":"Nile fork into two branches, between 2 branches", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of the sun", "answer":"Yellow", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"Khamsin?", "answer":"Create sand storms that blow hot air,dust,and grint into the Nile Valley", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"The color of the ocean", "answer":"Blue", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
-
-        ],"Science Chapter 1"
+        ],"World Geography Unit 4"
 
     ];	
     

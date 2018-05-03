@@ -4,10 +4,6 @@ myApp.factory('TestData',  function (Score) {
     var scienceChp1 = [
 		[{"question":"What did european trade guns for?", "answer":"Gold and Ivory", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
         {"question":"South of the Sahara___languages are spoken?", "answer":"800", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
-		{"question":"Herders move their flocks to differnt pastrares throughout the year", "answer":"Nomadic herding?", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
-        {"question":"Dissolving and washing away of nutrients", "answer":"Leaching", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
-
-        {"question":"Gift of the Nile?", "answer":"Egypt", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
 
         {"question":"World's longest river?", "answer":"Nile", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
@@ -18,7 +14,13 @@ myApp.factory('TestData',  function (Score) {
         {"question":"process of preparing bodies after death", "answer":"mummification", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
 
         {"question":"______% of Egyptians are Muslim", "answer":"90", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+     
+        {"question":"Herders move their flocks to differnt pastrares throughout the year", "answer":"Nomadic herding", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
+        {"question":"Dissolving and washing away of nutrients", "answer":"Leaching", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+
+        {"question":"Gift of the Nile?", "answer":"Egypt", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+     
 		{"question":"A canal in Egypt that links the Mediterranean and red seas", "answer":"Suez Canal", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
         {"question":"3 Maghreb nations", "answer":"Tunisia, Algeria, and Morocco", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
@@ -85,9 +87,11 @@ myApp.factory('TestData',  function (Score) {
 
         {"question":"4 reasons for South America’s economy growth", "answer":"coal reserves, money to invest, connections with Britain and Europe, forced labor with low wages on blacks", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
+
 		{"question":"14% of countries land, blacks are forced to live there", "answer":"Homelands", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},		
 
         {"question":"first black president", "answer":"Nelson Mandela", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
+
 
         {"question":"What is South Africa’s nickname", "answer":"Rainbow nation", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 

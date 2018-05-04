@@ -67,9 +67,7 @@ myApp.factory('TestData',  function (Score) {
 
 		{"question":"most western central African countries belong to an African financial community/has value as international markets because it can be exchanged for the French Franc", "answer":"CFA", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
-        {"question":"", "answer":"Democratic Republic of the Congo"}, 
-
-        {"question":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "answer":"", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
+        {"question":"has the most cobalt then any other country in the world. Has 1/3 of the worlds industrial diamonds", "answer":"Democratic Republic of the Congo", "userAnswer":"", "completed":false, "graded":false, "encouragement":""},
 
         {"question":"The largest lake in Africa", "answer":"Lake Victoria", "userAnswer":"", "completed":false, "graded":false, "encouragement":""}, 
 
